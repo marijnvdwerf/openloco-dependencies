@@ -65,7 +65,7 @@ class Boost < Formula
     # on such systems.
     without_libraries << "log" if ENV.compiler == :gcc
 
-    bootstrap_args << "--without-libraries=#{without_libraries.join(",")}"
+    bootstrap_args << "--with-libraries=filesystem"
 
     # layout should be synchronized with boost-python and boost-mpi
     args = ["--prefix=#{prefix}",
