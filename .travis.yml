@@ -1,0 +1,24 @@
+language: cpp
+
+os: osx
+
+env:
+  - HOMEBREW_NO_AUTO_UPDATE=1
+
+matrix:
+    include:
+        - osx_image: xcode9.3
+        - osx_image: xcode9.2
+
+install:
+    - brew uninstall --ignore-dependencies boost
+
+script:
+    - brew install --build-bottle sdl2.rb
+    - brew bottle sdl2
+
+    - brew install --build-bottle boost.rb
+    - brew bottle boost
+
+deploy:
+    - for f in *.tar.gz ; do curl --progress-bar --upload-file $f https://transfer.sh/$f -o link && cat link ; done
