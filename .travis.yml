@@ -20,5 +20,5 @@ script:
     - brew install --build-bottle boost.rb
     - brew bottle boost
 
-deploy:
+after_success:
     - for f in *.tar.gz ; do curl --progress-bar --upload-file $f https://transfer.sh/$f -o link && cat link ; done
