@@ -14,10 +14,10 @@ install:
     - brew uninstall --ignore-dependencies boost
 
 script:
-    - brew install --build-bottle sdl2.rb
+    - brew install --build-bottle Formula/sdl2.rb
     - brew bottle sdl2
 
-    - brew install --build-bottle boost.rb
+    - brew install --build-bottle Formula/boost.rb
     - brew bottle boost
 
 after_success:
