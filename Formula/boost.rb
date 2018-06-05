@@ -41,7 +41,7 @@ class Boost < Formula
 
     # Force boost to compile with the desired compiler
     open("user-config.jam", "a") do |file|
-      file.write "using darwin : : #{ENV.cxx} ;\n"
+      file.write "using darwin : : #{ENV.cxx} : <cxxflags>\"-arch x86_64 -arch i386\" ;\n"
     end
 
     # libdir should be set by --prefix but isn't
@@ -65,7 +65,7 @@ class Boost < Formula
     # on such systems.
     without_libraries << "log" if ENV.compiler == :gcc
 
-    bootstrap_args << "--with-libraries=filesystem"
+    bootstrap_args << "--without-libraries=#{without_libraries.join(",")}"
 
     # layout should be synchronized with boost-python and boost-mpi
     args = ["--prefix=#{prefix}",
@@ -89,7 +89,7 @@ class Boost < Formula
       args << "link=shared"
     end
 
-    args << "address-model=32"
+    args << "address-model=32_64" << "architecture=x86" << "pch=off"
 
     # Trunk starts using "clang++ -x c" to select C compiler which breaks C++11
     # handling using ENV.cxx11. Using "cxxflags" and "linkflags" still works.
