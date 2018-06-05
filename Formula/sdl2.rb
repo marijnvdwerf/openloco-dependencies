@@ -5,11 +5,11 @@ class Sdl2 < Formula
   sha256 "edc77c57308661d576e843344d8638e025a7818bff73f8fbfab09c3c5fd092ec"
 
   bottle do
-    root_url "https://github.com/marijnvdwerf/openloco-dependencies/releases/download/sdl2-2.0.8/"
+    root_url "https://github.com/marijnvdwerf/openloco-dependencies/releases/download/v1/"
     cellar :any
     rebuild 1
-    sha256 "4179e7f4191802f3e6e5cfc7ffc3b33772939e4738199b29285fdeb863e0ad00" => :sierra
-    sha256 "68fe7ad8a364deeeb187ba0db42bcf50c11500e88f2ee62af5b2fa2d07d84f3a" => :high_sierra
+    sha256 "310b53d38fb4f364d5092db86a87278e971fdf50f3bf89a35ae6f1e2a2b482e9" => :sierra
+    sha256 "0806bf948d89e937644261ecc55933fd7d87e9975d442211455409ee965489fb" => :high_sierra
   end
 
   head do

@@ -5,11 +5,11 @@ class Boost < Formula
   head "https://github.com/boostorg/boost.git"
 
   bottle do
-    root_url "https://github.com/marijnvdwerf/openloco-dependencies/releases/download/sdl2-2.0.8/"
+    root_url "https://github.com/marijnvdwerf/openloco-dependencies/releases/download/v1/"
     cellar :any
     rebuild 1
-    sha256 "5cf1eeffcf5ffeb7eea03282356ea0ff7a4fe64ba967f980b5e1c156015bbdeb" => :high_sierra
-    sha256 "dfaa779f44ed523c13857b8cb3e401357eaee8893f58c947b9a4bf4a65134ded" => :sierra
+    sha256 "b92dd2586ca68d3db5011ac2c7dbfab2b3b5f77961194c3846d3d3f699f6735b" => :sierra
+    sha256 "a56b297000c596267bd9fc01984338c9e2f20f4887fbeb925140842aa1e0c7c3" => :high_sierra
   end
 
   stable do
