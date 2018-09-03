@@ -5,11 +5,11 @@ class YamlCpp < Formula
   sha256 "e4d8560e163c3d875fd5d9e5542b5fd5bec810febdcba61481fe5fc4e6b1fd05"
 
   bottle do
-    root_url "https://github.com/marijnvdwerf/openloco-dependencies/releases/download/v2/"
+    root_url "https://github.com/marijnvdwerf/openloco-dependencies/releases/download/v3/"
     cellar :any
-    rebuild 1
-    sha256 "5ef251085c0e4ecea0df686ee707a0f3ed81bcf9220929850c71e687647d5bf9" => :sierra
-    sha256 "c6d699fa73637bcd2974ac369a55a470d0d0d94106c750290eb358ff15f6162f" => :high_sierra
+    rebuild 2
+    sha256 "39fde1a9783ef78ec72a537a8e731118a91cfa6d8c0d6f3b8005674527af1d0a" => :sierra
+    sha256 "df45bdb39df1979e3d6daa2335ac6e0d505383aa61d997ca375fac7417ac6ef4" => :high_sierra
   end
 
   option :universal
