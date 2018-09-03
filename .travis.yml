@@ -17,5 +17,8 @@ script:
     - brew install --build-bottle Formula/boost.rb
     - brew bottle boost
 
+    - brew install --build-bottle Formula/yaml-cpp.rb
+    - brew bottle yaml-cpp
+
 after_success:
     - for f in *.tar.gz ; do curl --progress-bar --upload-file $f https://transfer.sh/$f -o link && cat link ; done
