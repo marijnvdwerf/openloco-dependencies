@@ -20,7 +20,7 @@ class YamlCpp < Formula
   needs :cxx11
 
   def install
-    ENV.universal_binary if build.universal?
+    ENV.universal_binary
     args = std_cmake_args
     if build.with? "static-lib"
       args << "-DBUILD_SHARED_LIBS=OFF"
