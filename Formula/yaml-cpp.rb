@@ -4,6 +4,14 @@ class YamlCpp < Formula
   url "https://github.com/jbeder/yaml-cpp/archive/yaml-cpp-0.6.2.tar.gz"
   sha256 "e4d8560e163c3d875fd5d9e5542b5fd5bec810febdcba61481fe5fc4e6b1fd05"
 
+  bottle do
+    root_url "https://github.com/marijnvdwerf/openloco-dependencies/releases/download/v2/"
+    cellar :any
+    rebuild 1
+    sha256 "5ef251085c0e4ecea0df686ee707a0f3ed81bcf9220929850c71e687647d5bf9" => :sierra
+    sha256 "c6d699fa73637bcd2974ac369a55a470d0d0d94106c750290eb358ff15f6162f" => :high_sierra
+  end
+
   option :universal
   option "with-static-lib", "Build a static library"
 
